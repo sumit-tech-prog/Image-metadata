@@ -1,5 +1,5 @@
-# 📸 Image Metadata Extractor (CLI Version)
-### A clean and accurate EXIF & image metadata extraction tool for Kali Linux, OSINT, and Cybersecurity Projects.
+ Image Metadata Extractor (CLI Version)
+A clean and accurate EXIF & image metadata extraction tool for Kali Linux, OSINT, and Cybersecurity Projects.
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![Kali Linux](https://img.shields.io/badge/Kali-Linux-blueviolet)
@@ -8,9 +8,9 @@
 
 ---
 
-## 🔍 Overview
+##Overview
 
-`ametadata_clean.py` is a **terminal-based image metadata analyzer** that extracts **only** the important and meaningful information from images.
+`port.py` is a **terminal-based image metadata analyzer** that extracts **only** the important and meaningful information from images.
 
 It is designed for:
 - Cybersecurity students  
@@ -23,9 +23,7 @@ Runs directly in **Kali Linux terminal**.
 
 ---
 
-## ✨ Features
-
-### ✅ Extracts the Most Useful Metadata
+Extracts the Most Useful Metadata
 - **Capture date & time** (DateTimeOriginal)
 - **GPS coordinates** (converted to decimal)
 - **Clickable Google Maps link**
@@ -34,26 +32,8 @@ Runs directly in **Kali Linux terminal**.
 - **Resolution / Pixels**
 - **Number of frames** (GIF/APNG)
 - **DPI** (if available)
-- **Exposure details:**
-  - ISO  
-  - Aperture (FNumber)  
-  - Exposure time  
-  - Focal length  
 
-### 📁 Additional File Metadata
-- File size (bytes + human readable)
-- Modified time
-- Access time
-- Creation time (OS-dependent)
-
-### 🚀 Terminal Friendly & Clean Output
-- Easy to read  
-- JSON export available  
-- Works on multiple images at once  
-
----
-
-## 🛠️ Installation
+Installation
 
 ### 1. Clone the Repository
 ```bash
@@ -75,34 +55,33 @@ python ametadata_clean.py image.jpg
 
 ## 📚 Usage Guide
 
-### 🔹 Analyze a Single Image
+###  Analyze a Single Image
 ```bash
 python ametadata_clean.py photo.jpg
 ```
 
-### 🔹 Analyze Multiple Images
+### Analyze Multiple Images
 ```bash
 python ametadata_clean.py *.jpg
 ```
 
-### 🔹 Output JSON to Terminal
+###  Output JSON to Terminal
 ```bash
 python ametadata_clean.py photo.jpg -f json
 ```
 
-### 🔹 Save JSON Output to File
+###  Save JSON Output to File
 ```bash
 python ametadata_clean.py photo.jpg -o metadata.json
 ```
 
-### 🔹 Combined Example
+###  Combined Example
 ```bash
 python ametadata_clean.py img1.jpg img2.png -f json -o all_meta.json
 ```
-
 ---
 
-## 📤 Example Output (Text Mode)
+##  Example Output (Text Mode)
 
 ```
 ========================================================================
@@ -132,42 +111,4 @@ Exposure / lens:
   Aperture    : f/1.8
   FocalLength : 5.4 mm
 ========================================================================
-```
-
----
-
-## 📂 Project Structure
-
-```
-Image-Metadata-Extractor/
-│
-├── ametadata_clean.py        # Main script
-├── README.md                 # Documentation
-└── assets/                   # (Optional) screenshots / images
-```
-
----
-
-## ⚠️ Notes & Limitations
-- **PNG images rarely contain EXIF** (no GPS, date, device).
-- WhatsApp, Instagram, Facebook remove EXIF metadata.
-- HEIC support depends on Pillow installation.
-- EXIF availability depends on the original camera device.
-
----
-
-## 🛡️ License
-This project is under the **MIT License**.  
-Feel free to use, modify, and share it.
-
----
-
-## 🤝 Contributing
-Pull requests and issues are welcome!  
-If you want new features, just open a ticket.
-
----
-
-## ⭐ Support the Project
-If this tool is helpful, consider giving the repository a **star** to support development ❤️
 
