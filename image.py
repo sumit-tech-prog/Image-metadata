@@ -1,28 +1,3 @@
-#!/usr/bin/env python3
-"""
-ametadata_clean.py - focused CLI EXIF & image metadata extractor
-
-Saves as: ametadata_clean.py
-
-Purpose:
-  Print only the most useful image/file metadata:
-    - capture date/time (DateTimeOriginal preferred)
-    - GPS (decimal) + Google Maps link
-    - Camera / Mobile Make & Model
-    - Image format, mode, width x height (pixels), frames, DPI
-    - File size and filesystem timestamps (mtime fallback)
-    - Exposure: ISO, ExposureTime, FNumber, FocalLength
-
-Usage:
-  python ametadata_clean.py image.jpg
-  python ametadata_clean.py img1.jpg img2.png
-  python ametadata_clean.py img.jpg -f json
-  python ametadata_clean.py img.jpg -o out.json
-
-Dependencies:
-  pip install pillow exifread
-"""
-
 from __future__ import annotations
 import argparse
 import json
